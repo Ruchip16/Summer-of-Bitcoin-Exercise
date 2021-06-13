@@ -16,6 +16,7 @@ Here, the total weight of transactions in a block must not exceed **4,000,000 we
 
 **Approach** : We can implement this problem using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
+
 Lets take an example : We are given a knapsack of lets say capacity(w=6) having different  objects which has profit & weight
 - object 1 -> profit = 10 , weight = 1
 - object 2 -> profit = 12 , weight = 2 & so on...
