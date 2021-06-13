@@ -36,14 +36,20 @@ In 0/1 KnapSack we either include whole object or discard it there is no in betw
 **PseudoCode:** Pseudo recursive code for given example would be :
 
 knapSack(i, w)
+
 {
    if(i==0 || w==0 ) return 0;
+   
    if(w[i] > w) knapSack(i-1 , w);              // if current weight > current capacity of knapsack
-   else if(w[i] < w){                          // if current weight < weight capacity of knapsack
+   
+   else if(w[i] < w){                          // if current weight < weight capacity of knapsack 
+   
       a=p[i] + knapSack(i-1 , w-w[i])
       b=knapSack(i-1,w)
    }
    if(a>b) return a                           // take maximum of a,b
+   
    else return b
+   
 }
 
