@@ -43,7 +43,7 @@ We can implement this problem using Recursion by simply checking the
     }
 
 
-2] We can implement this problem using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
+2] We can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
 
 Lets take an example : We are given a knapsack of lets say capacity(w=6) having different  objects which has profit & weight
