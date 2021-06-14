@@ -35,13 +35,12 @@ We have to fill our Knapsack in such a way that we have maximum profit & weight 
 
 **Steps to get the maximum profit of the knapsack:**
 
-1] Calculate profit/weight ratio, we will include that object which has maximum profit/weight 
+According to knapsack problem, we have to include that objects which have maximum profit 
 
-2] According to knapsack problem, we have to include that objects which have maximum profit
+1] If weight of current transaction ID < the Maximum Weight 
+then we can either include that particular ID or we'll not include depending on whether that item will be a part of maximum profit item or not.
 
-3] Check if current weight < current capacity if it is then we will recursively calculate the max profit
-
-4] Else we will just call the function and check for the next iteartion 
+2] Otherwise, if the weight of current item is >=  maximum weight we'll surely not include it.
 
 Similar is our given problem statement.
 
