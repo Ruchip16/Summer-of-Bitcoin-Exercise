@@ -13,14 +13,66 @@ Here, the total weight of transactions in a block must not exceed **4,000,000 we
 
 **Note** : A transaction may only appear in a block if all of its parents appear earlier in the block.
 
-**To find**: Maximum Weight of the block
+**To find**: Maximum total fee
 
-**Approach** : 1] Brute-Force
+**Approach** : My Intuition behind this problem:-
 
-We can implement this problem using Recursion by simply checking the 
+After doing a lot of brainstorming, I was able to connect this given problem with the 0/1 Knapsack Problem of Dynamic Programming.
 
-**PseudoCode:** Pseudo recursive code for given example would be :
+As we know, in the problems we apply dynamic programming if 2 of these conditions meet:-
 
+1) In 0/1 KnapSack we either include whole object or discard it there is no in between like Fractional KnapSack
+
+2) When we have to provide an Optimal Output. Eg:- Max Profit, Min Loss, largest value or a lowest value etc.
+
+In the actual 0/1 Knapsack problem we are given a knapsack (bag) having capacity W. A list of items which have their respective weight and profit value. So, we have to fill the knapsack(bag) in such a way that our bag is almost filled closest to its maximum capacity(W) and we are obtain the maximum profit.
+
+Lets take an example : We are given a knapsack of lets say capacity(w=6) having different  objects which has profit & weight
+- object 1 -> profit = 10 , weight = 1
+- object 2 -> profit = 12 , weight = 2 & so on...
+
+We have to fill our Knapsack in such a way that we have maximum profit & weight should be equal to the capacity of the knapsack 
+
+**Steps to get the maximum profit of the knapsack:**
+
+1] Calculate profit/weight ratio, we will include that object which has maximum profit/weight 
+
+2] According to knapsack problem, we have to include that objects which have maximum profit
+
+3] Check if current weight < current capacity if it is then we will recursively calculate the max profit
+
+4] Else we will just call the function and check for the next iteartion 
+
+Similar is our given problem statement.
+
+Now the question is but **Why we are applying Dynamic Programming here?**
+
+1) We have a choice of selecting a particular transaction I'd in such a way that it yields us the maximum total fee.
+
+2) In this problem we have to obtain an optimal output i.e. the maximum total fee.
+
+Why particularly we are applying the 0/1 Knapsack approach?
+
+1) In the knapsack problem we are given with 2 lists first one is the weight list of all items and secondly the profit list of all items. Similarly, here we  are given the weight column of all transaction ID's in the dataset which we'll be converting into the weight list and secondly the fee column which we'll be converting into the fee list.
+
+So, 
+
+Weight list of 0/1 Knapsack problem is equivalent to the weight list of all transaction ID's.
+
+Profit list of 0/1 Knapsack problem is equivalent to the fee list of all transaction IDs.
+
+2) Here weight of Knapsack bag is equivalent to 4,000,000 weight which we don't have to exceed.
+
+3) Thirdly, in the 0/1 knapsack problem we have to find the maximum profit here we have to find the maximum total fee obtained.
+
+There are total 3 ways of applying the 0/1 Knapsack approach to this problem
+
+Approach 1:-  Recursion 
+
+The Naive approach which I could think off here is through basic recursion, we can simply check if the selected transaction_id(txid) gives the maximum fee if it gives we 
+select it else we have to find another maximum output i.e we can check if next iteration gives us or not and it continues until we reach the max fee
+
+**PseudoCode:** Pseudo recursive code for given problem would be :
 
     knapSack(i, w)
     {
@@ -46,25 +98,14 @@ We can implement this problem using Recursion by simply checking the
 
 **Space Complexity : O(1)**
 
-2] We can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
+Approach 2:- Memoization (Top Down Dynamic Programming) 
+As discussed above, we can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
 
-Lets take an example : We are given a knapsack of lets say capacity(w=6) having different  objects which has profit & weight
-- object 1 -> profit = 10 , weight = 1
-- object 2 -> profit = 12 , weight = 2 & so on...
 
-We have to fill our Knapsack in such a way that we have maximum profit & weight should be equal to the capacity of the knapsack 
 
-In 0/1 KnapSack we either include whole object or discard it there is no in between like Fractional KnapSack
+Approach 3:- Tabulation (Bottom Up Dynamic Programming)
 
-*Steps to get the maximum profit of the knapsack* : 
 
-1] Calculate profit/weight ratio, we will include that object which has maximum profit/weight 
 
-2] So, 0/1 means 0 means discard the object , 1 means include the object 
-*Note* : We have to include that objects which have maximum profit
-
-3] Check if current weight < current capacity if it is then we will recursively calculate the max profit
-
-4] Else we will just call the function and check for the next iteartion 
 
