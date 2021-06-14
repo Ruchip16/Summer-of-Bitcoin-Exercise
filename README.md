@@ -15,7 +15,35 @@ Here, the total weight of transactions in a block must not exceed **4,000,000 we
 
 **To find**: Maximum Weight of the block
 
-**Approach** : We can implement this problem using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
+**Approach** : 1] Brute-Force
+
+We can implement this problem using Recursion by simply checking the 
+
+**PseudoCode:** Pseudo recursive code for given example would be :
+
+
+    knapSack(i, w)
+    {
+    
+    if(weight==0 || parent_txids==0 ) return 0;
+   
+    if(txid[parent_txids] > W){
+   
+       knapSack(weight, fee, W, parent_txids);                                                                 // if parent transactions > given weight of knapsack
+     }
+   
+    else if(txids[parent_txids] <= W){                                                                         // if parent transactions < given weight of knapsack 
+   
+      max(fee[parent_txids] + knapSack(weight,fee,W-weight[parent_txids],parent_txids), 
+      knapSack(weight, fee, W, parent_txids)
+    
+    }
+    W = knapSack(weight,fee,W,len(weight))
+                                                                                                                            // W = maximum block weight
+    }
+
+
+2] We can implement this problem using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
 
 Lets take an example : We are given a knapsack of lets say capacity(w=6) having different  objects which has profit & weight
@@ -32,24 +60,4 @@ In 0/1 KnapSack we either include whole object or discard it there is no in betw
 
 2] So, 0/1 means 0 means discard the object , 1 means include the object 
 *Note* : We have to include that objects which have maximum profit
-
-**PseudoCode:** Pseudo recursive code for given example would be :
-
-knapSack(i, w)
-
-{
-   if(i==0 || w==0 ) return 0;
-   
-   if(w[i] > w) knapSack(i-1 , w);              // if current weight > current capacity of knapsack
-   
-   else if(w[i] < w){                          // if current weight < weight capacity of knapsack 
-   
-      a=p[i] + knapSack(i-1 , w-w[i])
-      b=knapSack(i-1,w)
-   }
-   if(a>b) return a                           // take maximum of a,b
-   
-   else return b
-   
-}
 
