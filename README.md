@@ -42,8 +42,9 @@ We can implement this problem using Recursion by simply checking the
                                                                                                                             // W = maximum block weight
     }
 
-**Time Complexity of Recursive Code would be : O(2^n) 
-Space Complexity : O(1)**
+**Time Complexity of Recursive Code would be : O(2^n)**
+
+**Space Complexity : O(1)**
 
 2] We can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
