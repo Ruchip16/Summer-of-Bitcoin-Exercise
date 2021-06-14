@@ -42,6 +42,8 @@ We can implement this problem using Recursion by simply checking the
                                                                                                                             // W = maximum block weight
     }
 
+**Time Complexity of Recursive Code would be : O(2^n) 
+Space Complexity : O(1)**
 
 2] We can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
@@ -60,4 +62,8 @@ In 0/1 KnapSack we either include whole object or discard it there is no in betw
 
 2] So, 0/1 means 0 means discard the object , 1 means include the object 
 *Note* : We have to include that objects which have maximum profit
+
+3] Check if current weight < current capacity if it is then we will recursively calculate the max profit
+
+4] Else we will just call the function and check for the next iteartion 
 
