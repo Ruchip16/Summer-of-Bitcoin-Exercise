@@ -100,9 +100,9 @@ wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
                                                                                                                             // W = maximum block weight
     }
 
-### Time Complexity of Recursive Code would be : O(2^n)**
+### Time Complexity of Recursive Code would be : O(2^n)
 
-### Space Complexity : O(1)**
+### Space Complexity : O(1)
 
 ### Approach 2:- Tabulation (Bottom Up Dynamic Programming)
 As discussed above, we can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
