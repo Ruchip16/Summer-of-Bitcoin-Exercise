@@ -1,4 +1,3 @@
-[readme.md](https://github.com/Ruchip16/Summer-of-Bitcoin-Exercise/files/6657700/readme.md)
 # Summer-of-Bitcoin-Exercise
 
 ## Problem Statement:
@@ -12,11 +11,11 @@ The miner selects an ordered list of transactions which have a combined weight b
 Here, the total weight of transactions in a block must not exceed **4,000,000 weight.** 
 *Assume that there is no coinbase transaction.*
 
-**Note** : A transaction may only appear in a block if all of its parents appear earlier in the block.
+**Note**: A transaction may only appear in a block if all of its parents appear earlier in the block.
 
 **To find**: Maximum total fee
 
-**Approach** : My Intuition behind this problem:-
+### Approach: My Intuition behind this problem:-
 
 After doing a lot of brainstorming, I was able to connect this given problem with the 0/1 Knapsack Problem of Dynamic Programming.
 
@@ -67,12 +66,19 @@ Profit list of 0/1 Knapsack problem is equivalent to the fee list of all transac
 
 There are total 3 ways of applying the 0/1 Knapsack approach to this problem
 
-Approach 1:-  Recursion 
+#### Approach 1:-  Recursion 
 
 The Naive approach which I could think off here is through basic recursion, we can simply check if the selected transaction_id(txid) gives the maximum fee if it gives we 
 select it else we have to find another maximum output i.e we can check if next iteration gives us or not and it continues until we reach the max fee
 
-**PseudoCode:** Pseudo recursive code for given problem would be :
+Consider In the following recursion tree, Knapsack() refers 
+to knapSack(). 
+The recursion tree is for following sample inputs.
+wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
+
+![knapsack](https://user-images.githubusercontent.com/72685035/122101392-dc51cd80-ce31-11eb-8b73-90527fdd457a.png)
+
+### PseudoCode:** Pseudo recursive code for given problem would be :
 
     knapSack(i, w)
     {
@@ -94,18 +100,15 @@ select it else we have to find another maximum output i.e we can check if next i
                                                                                                                             // W = maximum block weight
     }
 
-**Time Complexity of Recursive Code would be : O(2^n)**
+#### Time Complexity of Recursive Code would be : O(2^n)**
 
-**Space Complexity : O(1)**
+#### Space Complexity : O(1)**
 
-Approach 2:- Memoization (Top Down Dynamic Programming) 
+#### Approach 2:- Tabulation (Bottom Up Dynamic Programming)
 As discussed above, we can implement this using **Dynamic programming** classic problem **'0/1 KnapSack problem'**
 KnapSack problem can be implemented using Top Down & Bottom Up approach. I have implemented using Top Down approach. 
 
-
-
-Approach 3:- Tabulation (Bottom Up Dynamic Programming)
-
+output and code are in the files above
 
 
 
