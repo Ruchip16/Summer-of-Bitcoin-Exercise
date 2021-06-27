@@ -37,8 +37,7 @@ According to knapsack problem, we have to include that objects which have maximu
 
 2] If above step is true, we include the transaction and update fee and weight and erase it from current set else we go to next higher transaction.
 
-
-Now the question is but **Why we are applying Greedy Approach here?**
+Now the question is but **Why we are applying Greedy Approach of fractional knapsack here?**
 
 1) We have a choice of selecting a particular transaction I'd in such a way that it yields us the maximum total fee.
 
