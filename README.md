@@ -13,7 +13,7 @@ Here, the total weight of transactions in a block must not exceed **4,000,000 we
 
 **Note**: A transaction may only appear in a block if all of its parents appear earlier in the block.
 
-**To find**: Maximum total fee
+**To find**: Maximum profit of a bitcoin miner
 
 ### Approach: My Intuition behind this problem:-
 
@@ -113,4 +113,4 @@ output and code are in the files above
 ### Time Complexity : O(N^2)
 ### Space Complexity : O(1)
 
-References : geeksforgeeks
+###References : geeksforgeeks
