@@ -103,10 +103,9 @@ Here is the output file :
 
 ![image](https://user-images.githubusercontent.com/72685035/123551998-d2b15980-d791-11eb-84a9-4eb62cd4b935.png)
 
-output and code are in the files above
-
+### Code is in Fractional Knapsack.cpp & output in output.txt 
 ### Time Complexity : O(N^2)
 ### Space Complexity : O(1)
 
-###References : geeksforgeeks
+### References : geeksforgeeks
 https://www.geeksforgeeks.org/fractional-knapsack-problem/
