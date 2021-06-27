@@ -71,25 +71,7 @@ wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
 
 ### Pseudo recursive code for given problem would be :
 
-    knapSack(i, w)
-    {
-    
-    if(weight==0 || parent_txids==0 ) return 0;
-   
-    if(txid[parent_txids] > W){
-   
-       knapSack(weight, fee, W, parent_txids);                                                                 // if parent transactions > given weight of knapsack
-     }
-   
-    else if(txids[parent_txids] <= W){                                                                         // if parent transactions < given weight of knapsack 
-   
-      max(fee[parent_txids] + knapSack(weight,fee,W-weight[parent_txids],parent_txids), 
-      knapSack(weight, fee, W, parent_txids)
-    
-    }
-    W = knapSack(weight,fee,W,len(weight))
-                                                                                                                            // W = maximum block weight
-    }
+![image](https://user-images.githubusercontent.com/72685035/123554009-bca89680-d79b-11eb-8f4e-68f8662cacf0.png)
 
 ### Time Complexity of Recursive Code would be : O(2^n)
 
