@@ -19,13 +19,13 @@ Here, the total weight of transactions in a block must not exceed **4,000,000 we
 
 After doing a lot of brainstorming, I was able to connect this given problem with the 0/1 Knapsack Problem of Dynamic Programming but there were some errors and testcases where it failed hence I implemented it using Fractional Knapsack method in greedy approach
 
-As we know, in the problems we apply dynamic programming if 2 of these conditions meet:-
+As we know, the conditions for applying fractional knapsack are:
 
 1) In Fractional Knapsack we are not allowed to break items, we either take the whole item or discard it
 
    In Fractional Knapsack, we can break items for maximizing the total value of knapsack.
    
-3) When we have to provide an Optimal Output. Eg:- Max Profit, Min Loss, largest value or a lowest value etc.
+2) When we have to provide an Optimal Output. Eg:- Max Profit, Min Loss, largest value or a lowest value etc.
 
 We have to fill our Knapsack in such a way that we have maximum profit & weight should be equal to the capacity of the knapsack 
 
@@ -70,7 +70,7 @@ wt[] = {1, 1, 1}, W = 2, val[] = {10, 20, 30}
 
 ![knapsack](https://user-images.githubusercontent.com/72685035/122101392-dc51cd80-ce31-11eb-8b73-90527fdd457a.png)
 
-### PseudoCode:** Pseudo recursive code for given problem would be :
+### Pseudo recursive code for given problem would be :
 
     knapSack(i, w)
     {
