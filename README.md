@@ -43,7 +43,7 @@ Now the question is but **Why we are applying Greedy Approach of fractional knap
 
 2) In this problem we have to obtain an optimal output i.e. the maximum total fee.
 
-### Why particularly we are applying the 0/1 Knapsack approach?
+### Why particularly we are applying the fractional Knapsack approach?
 
 1) In the knapsack problem we are given with 2 lists first one is the weight list of all items and secondly the profit list of all items. Similarly, here we  are given the weight column of all transaction ID's in the dataset which we'll be converting into the weight list and secondly the fee column which we'll be converting into the fee list.
 
