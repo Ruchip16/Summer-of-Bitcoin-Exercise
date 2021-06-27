@@ -82,7 +82,7 @@ As discussed above, we can implement this using **Greedy approach** classic prob
 
 Here is the output file :
 
-![image](https://user-images.githubusercontent.com/72685035/123554093-1c9f3d00-d79c-11eb-86f0-9b87bd4d76a7.png)
+![image](https://user-images.githubusercontent.com/72685035/123554263-bcf56180-d79c-11eb-886e-734d276af359.png)
 
 ### Code is in Fractional Knapsack.cpp & output in output.txt 
 ### Time Complexity : O(N^2)
