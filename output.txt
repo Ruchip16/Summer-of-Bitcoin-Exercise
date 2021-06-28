@@ -1,6 +1,0 @@
-No of given Txid(transactions): 5214
-Number of txid in final block 3174
-Total fee  : 5696031
-Total weight : 3.99994e+006
-Percentage of weight: 99.9984 %
-
